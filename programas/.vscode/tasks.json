@@ -1,0 +1,33 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build OpenGL C Project",
+      "type": "shell",
+      "command": "gcc", // Mude de g++ para gcc
+      "args": [
+        "${file}",
+        "-o",
+        "${fileDirname}\\${fileBasenameNoExtension}.exe",
+        "-LC:\\MinGW\\lib", // Adicione o caminho para suas libs MinGW se não estiver no PATH
+        "-lfreeglut",
+        "-lopengl32",
+        "-lglu32",
+        "-lgdi32",
+        "-IC:\\MinGW\\include", // Adicione o caminho para seus includes MinGW
+        "-Wall",
+        "-Wextra",
+        "-std=c11" // Mude de -std=c++17 para -std=c11 (ou -std=c99)
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Tarefa de compilação para projetos OpenGL em C com FreeGLUT"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+Package: vcpkg-cmake-config
+Version: 2024-05-23
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 8a77defad65fd17f463930a4b370229af981085d423c76f076389398a31c8d9c
+Status: install ok installed
+
+Package: vcpkg-cmake
+Version: 2024-04-23
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 067ca01d9778b10e8cd922b4d8b9c63806dfcd72ca96f48e6bd191253053fad7
+Status: install ok installed
+
+Package: fftw3
+Version: 3.3.10
+Port-Version: 10
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 08d818e021ede301590dad1e19036685dd628b3287a6579ea0ab2a374718fe59
+Description: FFTW is a C subroutine library for computing the discrete Fourier transform (DFT) in one or more dimensions, of arbitrary input size, and of both real and complex data (as well as of even/odd data, i.e. the discrete cosine/sine transforms or DCT/DST).
+Status: install ok installed
+
+Package: egl-registry
+Version: 2024-01-25
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 028ce7d3461f86d172c6fa9bef25c263c9330eb8ed886bac8f4bd25ebac034ee
+Description: EGL API and Extension Registry
+Status: install ok installed
+
+Package: opengl-registry
+Version: 2024-02-10
+Port-Version: 1
+Depends: egl-registry
+Architecture: x64-windows
+Multi-Arch: same
+Abi: a28a759a507052fe631abc0b68d1ea97c63408d11dca8516c60ef514cbe65fba
+Description: OpenGL, OpenGL ES, and OpenGL ES-SC API and Extension Registry
+Status: install ok installed
+
+Package: opengl
+Version: 2022-12-04
+Port-Version: 3
+Depends: opengl-registry
+Architecture: x64-windows
+Multi-Arch: same
+Abi: fc3319036570b51fc89fb9d1069f4ac6a0d81ea5a2ed612b8d02a79634112441
+Description: Open Graphics Library (OpenGL)[3][4][5] is a cross-language, cross-platform application programming interface (API) for rendering 2D and 3D vector graphics.
+Status: install ok installed
+
+Package: freeglut
+Version: 3.6.0
+Port-Version: 1
+Depends: opengl, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: dd89d1250a3f2ebad60510928864fd163a74260f977593edae97e04268719f17
+Description: A free OpenGL utility toolkit, the open-sourced alternative to the GLUT library.
+Status: install ok installed
+
+Package: sdl2
+Version: 2.32.8
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 8449625e905151a704e0462bcd417dd56556c460a80ad06415b7c1b9b6ef197b
+Description: Simple DirectMedia Layer is a cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D.
+Status: install ok installed
+
+Package: wavpack
+Version: 5.8.1
+Port-Version: 2
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 03ebae59af71182ac4d25fdec1e03a442b73f930778d2574147ea6ab87568e5f
+Description: WavPack encode/decode library, command-line programs, and several plugins
+Status: install ok installed
+
+Package: libogg
+Version: 1.3.6
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: cbaa1aa1ab8313936f607a3b1af3ee646a24833c0214b50573d09ff8272fd22d
+Description: Ogg is a multimedia container format, and the native file and stream format for the Xiph.org multimedia codecs.
+Status: install ok installed
+
+Package: libvorbis
+Version: 1.3.7
+Port-Version: 4
+Depends: libogg, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 1840d8c75a49f332a71a18a0a9ae66d9d83e85868f92f5f53f2521ab6aa83422
+Description: Ogg Vorbis is a fully open, non-proprietary, patent-and-royalty-free, general-purpose compressed audio format
+Status: install ok installed
+
+Package: sdl2-mixer
+Version: 2.8.1
+Port-Version: 1
+Depends: libvorbis, sdl2, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 3a3c5f88e9fb2c51c69717a825cd8c26b986de81dbe40016d7a663c857e8bbd4
+Description: Multi-channel audio mixer library for SDL.
+Default-Features: wavpack
+Status: install ok installed
+
+Package: sdl2-mixer
+Feature: wavpack
+Depends: wavpack
+Architecture: x64-windows
+Multi-Arch: same
+Description: Enable WavPack music.
+Status: install ok installed
+

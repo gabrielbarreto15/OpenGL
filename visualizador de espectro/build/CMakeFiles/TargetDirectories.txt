@@ -1,0 +1,3 @@
+C:/Users/gabri/Documents/Computação Gráfica/OpenGl/visualizador de espectro/build/CMakeFiles/spectrosdl.dir
+C:/Users/gabri/Documents/Computação Gráfica/OpenGl/visualizador de espectro/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/gabri/Documents/Computação Gráfica/OpenGl/visualizador de espectro/build/CMakeFiles/ZERO_CHECK.dir

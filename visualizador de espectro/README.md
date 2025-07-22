@@ -24,9 +24,11 @@ vcpkg install sdl2 sdl2-mixer fftw3 freeglut
 
 Para a compilação foi utilizado o CMake com vcpkg. Todos os arquivos necessários já estão configurados na pasta do projeto, como: CMakeLists.txt e vcpkg.json.
 
-Assim, para compilar e excutar basta digitar o comando dentro da pasta:
+Assim, para compilar e excutar basta digitar os comandos dentro da pasta:
 
 ```bash
+cmake -B build -S . -DCMAKE_TOOLCHAIN_FILE="C:/<Coloque o caminho onde instalou o vcpkg>/scripts/buildsystems/vcpkg.cmake" -DVCPKG_TARGET_TRIPLET=x64-windows
+
 cmake --build build --config Release
 ```
 
